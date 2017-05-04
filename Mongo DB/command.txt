@@ -1,0 +1,29 @@
+cai mongodb tren win
+tao thu muc C:\Program Files\MongoDB\data
+chay cmd voi admin
+cd "C:\Program Files\MongoDB\Server\3.4\bin"
+mongod --dbpath "C:\Program Files\MongoDB\data"
+neu hien "waiting connect on port 27017" la dc
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath "C:\Program Files\MongoDB\data"
+
+
+show dbs
+show collections
+use <dbs>
+use test
+db.dropDatabase()
+db.COLLECTION_NAME.drop()
+db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
+db.collection.save({a:"1"})
+db.collection.find()
+db.mycol.find().pretty() // dep hon
+db.mycol.find({"name":"a","title": "MongoDB Overview"})
+db.mycol.find({$or:[{a:34},{c:3}]})  // tim co 1 trong 2
+db.collection.remove({a:"1"})  // xoa tat ca
+db.collection.remove({a:"1"},1)  // xoa 1
+db.mycol.update({a:34},{$set:{a:100}})
+
+
+
+npm init
+$ npm install express body-parser cookie-parser morgan serve-favicon debug jade mongoose --save
