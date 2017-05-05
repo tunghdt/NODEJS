@@ -5,12 +5,10 @@ var server = require("http").createServer(app);
 var MongoClient = require('mongodb').MongoClient;
 
 
-
 // Connection URL
 var url = 'mongodb://localhost:27017/myproject';
 
 // Use connect method to connect to the server
-
 
 app.get("/d/:id", function(req, res){
        var i = req.params.id;

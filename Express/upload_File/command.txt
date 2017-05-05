@@ -1,1 +1,1 @@
-npm install --save express-fileupload
+npm install --save express -fileupload
